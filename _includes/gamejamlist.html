@@ -1,4 +1,4 @@
-<div id="gamejamlist">
+<div id="GameJamList">
 	<h1>
 		Game Jams:
 	</h1>
@@ -7,12 +7,14 @@
 	{% for game in ordered_games reversed %}
 
 
-	<div class="list">
-		<h2>{{game.title}}</h2>
+	<a href="http://teamspontaneouscombustion.github.io/games/{{game.title}}" class="List">
+		<h2>
+			{{game.title}}
+			<img src="/assets/Logos/{{game.title}}.png">
+		</h2>
 		<p>{{game.desc}}</p>
-		<!--<img src="/assets/Logos/{{game.title}}.png"-->
 		<p> Made in {{game.time}} for the {{game.made}}</p>
-	</div>
+	</a>
 
 	{% endfor %}
 </div>

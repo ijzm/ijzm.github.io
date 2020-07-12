@@ -55,10 +55,17 @@ h3 {
 
 #Navbar > a {
 	display: inline-block;
+	font-size: 2em;
+}
+
+#Navbar a {
+	text-decoration: none;
+	color: black;
 }
 
 #Navbar > ul > li {
 	display: inline-block;
+
 }
 
 a.Anchor {
@@ -82,18 +89,22 @@ a.Anchor {
 }
 
 #Main > #Name {
-	font-size: 7vw;
+	font-size: 7em;
 }
 
 #Main > #Subtitle {
-	font-size: 3vw;
+	font-size: 3em;
 }
 
 #Main > #MiniContact {
-
-
 	position: absolute;
 	bottom: 10px;
+	font-size: 2em;
+}
+
+#Main > #MiniContact > a {
+	color: black;
+	text-decoration: none;
 }
 
 /*--------------ABOUT--------------*/
@@ -103,7 +114,6 @@ a.Anchor {
 	flex-direction: column;
 	background-color: pink;
 
-	height: 100%;
 }
 
 #AboutContent > .Title {
@@ -125,6 +135,10 @@ a.Anchor {
 #AboutContent > .Content > #Skillset {
 	width: 33%;
 	padding: 30px;
+}
+
+#AboutContent ul {
+	list-style-type: none;
 }
 
 .Stars {
@@ -149,6 +163,24 @@ a.Anchor {
 
 #PortfolioContent > #GameJamList {
 	width: 80%;
+}
+
+#PortfolioContent .List {
+	display: block;
+	padding: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+	background-color: lightgray;
+
+	color: black;
+	text-decoration: none;
+}
+
+#PortfolioContent > #GameJamList > .List img {
+	height: 50px;
+	float: right;
+	display: inline-flex;
 }
 
 /*--------------CONTACT--------------*/
