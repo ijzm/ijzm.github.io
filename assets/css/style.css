@@ -1,0 +1,175 @@
+* {
+	font-family: 'Roboto Mono', monospace;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	width: 100%;
+	font-size: 3em;
+	margin: 0;
+}
+
+h2 {
+	width: 100%;
+	font-size: 2em;
+	margin: 0;
+}
+
+h3 {
+	width: 100%;
+	font-size: 1.5em;
+	margin: 0;
+}
+
+/*--------------NAVBAR--------------*/
+
+#Navbar {
+	display: flex;
+	position: fixed;
+	z-index: 100;
+	align-items: center;
+
+	width: 100%;
+	height: 50px;
+
+	background-color: lightblue;
+	
+	font-size: 100%;
+}
+
+#Navbar > ul {
+	position: absolute;
+	right: 0;
+
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+}
+
+#Navbar > a {
+	display: inline-block;
+}
+
+#Navbar > ul > li {
+	display: inline-block;
+}
+
+a.Anchor {
+    display: block;
+    position: relative;
+    top: -50px;
+    visibility: hidden;
+}
+
+/*--------------MAIN--------------*/
+
+#Main {
+	display: flex;
+	flex-direction: column;
+	background-color: lightgray;
+
+	justify-content: center;
+	align-items: center;
+
+	height: 100%;
+}
+
+#Main > #Name {
+	font-size: 7vw;
+}
+
+#Main > #Subtitle {
+	font-size: 3vw;
+}
+
+#Main > #MiniContact {
+
+
+	position: absolute;
+	bottom: 10px;
+}
+
+/*--------------ABOUT--------------*/
+
+#AboutContent {
+	display: flex;
+	flex-direction: column;
+	background-color: pink;
+
+	height: 100%;
+}
+
+#AboutContent > .Title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#AboutContent > .Content {
+	height: 100%;
+	display: flex;
+}
+
+#AboutContent > .Content > #Description {
+	width: 66%;
+	padding: 30px;
+}
+
+#AboutContent > .Content > #Skillset {
+	width: 33%;
+	padding: 30px;
+}
+
+.Stars {
+	display: inline-flex;
+	float: right;
+}
+
+.ColoredStar {
+	color: orange;
+}
+
+/*--------------PORTFOLIO--------------*/
+
+#PortfolioContent {
+	display: flex;
+	flex-direction: column;
+	background-color: lightgreen;
+
+	justify-content: center;
+	align-items: center;
+}
+
+#PortfolioContent > #GameJamList {
+	width: 80%;
+}
+
+/*--------------CONTACT--------------*/
+
+#ContactContent {
+	display: flex;
+	flex-direction: column;
+	background-color: lightyellow;
+
+	height: 100%;
+}
+
+/*--------------FOOTER--------------*/
+
+footer {
+	display: flex;
+	flex-direction: column;
+	background-color: lavenderblush;
+
+	justify-content: center;
+	align-items: center;
+
+	height: 100px;
+}

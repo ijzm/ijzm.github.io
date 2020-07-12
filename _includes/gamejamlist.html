@@ -1,0 +1,18 @@
+<div id="gamejamlist">
+	<h1>
+		Game Jams:
+	</h1>
+	{% assign ordered_games = site.gamejams | sort: "display-order" %}
+
+	{% for game in ordered_games reversed %}
+
+
+	<div class="list">
+		<h2>{{game.title}}</h2>
+		<p>{{game.desc}}</p>
+		<!--<img src="/assets/Logos/{{game.title}}.png"-->
+		<p> Made in {{game.time}} for the {{game.made}}</p>
+	</div>
+
+	{% endfor %}
+</div>
