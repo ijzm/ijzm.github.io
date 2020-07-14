@@ -2,18 +2,20 @@
 	<h1>
 		Game Jams:
 	</h1>
-	{% assign ordered_games = site.gamejams | sort: "display-order" %}
+	<div class="GridList">
+		{% assign ordered_games = site.gamejams | sort: "display-order" %}
+		{% for game in ordered_games reversed %}
 
-	{% for game in ordered_games reversed %}
-
-	<a href="http://teamspontaneouscombustion.github.io/games/{{game.title}}" class="List">
-		<h2>
-			{{game.title}}
-			<img src="/assets/Logos/{{game.title}}.png">
-		</h2>
-		<p>{{game.desc}}</p>
-		<p> Made in {{game.time}} for the {{game.made}}</p>
-	</a>
-
+		<a href="http://teamspontaneouscombustion.github.io/games/{{game.title}}" class="List">
+			<div>
+			<h2>
+				{{game.title}}
+			</h2>
+				<img src="/assets/Logos/{{game.title}}.png">
+			</div>
+			<p>{{game.desc}}</p>
+			<p> Made in {{game.time}} for the {{game.made}}</p>
+		</a>
 	{% endfor %}
+	</div>
 </div>
