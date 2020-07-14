@@ -37,6 +37,7 @@
 	--title-font:       #66FCF1;
 	--subtitle-font:    #C5C6C7;
 	--minicontact-font: #C5C6C7;
+	--minicontact-hover:#E0E0E0;
 
 	--h1-font:          #66FCF1;
 	--h2-font:          #66FCF1;
@@ -46,6 +47,7 @@
 	--star-colored:     #66FCF1;
 
 	--list-bg:          #0B0C10;
+	--list-bg-hover:    #191B24;
 	--list-font:        #C5C6C7;
 }
 
@@ -167,14 +169,14 @@ a.Anchor {
 }
 
 #Main > #MiniContact > a {
-	color: black;
-	text-decoration: none;
-}
-
-#Main > #MiniContact > .fab {
 	color: var(--minicontact-font);
+	text-decoration: none;
+	transition: 0.2s ease-in-out;
 }
 
+#Main > #MiniContact > a:hover {
+	color: var(--minicontact-hover);
+}
 /*--------------ABOUT--------------*/
 
 #AboutContent {
@@ -300,6 +302,14 @@ a.Anchor {
 	display: inline-block;
 	width: auto;
 	max-width: calc(100% - 200px);
+}
+
+#GameJamList a {
+	transition: 0.2s ease-in-out;
+}
+
+#GameJamList a:hover {
+	background-color: var(--list-bg-hover);
 }
 
 #PortfolioContent > #GameJamList > .GridList > .List img {
