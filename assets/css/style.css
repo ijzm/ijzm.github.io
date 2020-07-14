@@ -1,5 +1,57 @@
+/*Variables*/
+/*DEBUG
+:root {
+	--navbar-bg:    lightblue;
+	--main-bg:      lightgray;
+	--about-bg:     pink;
+	--portfolio-bg: lightgreen;
+	--contact-bg:   lightyellow;
+	--footer-bg:    lavenderblush;
+
+	--navbar-main-font: black;
+	--navbar-font:      black;
+
+	--title-font:       black;
+	--subtitle-font:    black;
+	--minicontact-font: black;
+
+	--h1-font:          black;
+	--h2-font:          black;
+	--default-font:     black;
+
+	--list-bg:          lightgray;
+	--list-font:        black;
+}*/
+
+:root {
+	--navbar-bg:    #0B0C10;
+	--main-bg:      #1F2833;
+	--about-bg:     #1F2833;
+	--portfolio-bg: #1F2833;
+	--contact-bg:   #1F2833;
+	--footer-bg:    #0B0C10;
+
+	--navbar-main-font: #66FCF1;
+	--navbar-font:      #C5C6C7;
+
+	--title-font:       #66FCF1;
+	--subtitle-font:    #C5C6C7;
+	--minicontact-font: #C5C6C7;
+
+	--h1-font:          #66FCF1;
+	--h2-font:          #66FCF1;
+	--default-font:     #C5C6C7;
+
+	--star-default:     #C5C6C7;
+	--star-colored:     #66FCF1;
+
+	--list-bg:          #0B0C10;
+	--list-font:        #C5C6C7;
+}
+
 * {
 	font-family: 'Roboto Mono', monospace;
+	color: var(--default-font);
 }
 
 html, body {
@@ -14,12 +66,14 @@ h1 {
 	width: 100%;
 	font-size: 3em;
 	margin: 0;
+	color: var(--h1-font);
 }
 
 h2 {
 	width: 100%;
 	font-size: 2em;
 	margin: 0;
+	color: var(--h2-font);
 }
 
 h3 {
@@ -39,8 +93,10 @@ h3 {
 	width: 100%;
 	height: 50px;
 
-	background-color: lightblue;
-	
+	background-color: var(--navbar-bg);
+	color: var(--navbar-main-font);
+
+
 	font-size: 100%;
 }
 
@@ -54,6 +110,10 @@ h3 {
 
 }
 
+#Navbar > #NavbarLogo {
+	color: var(--navbar-main-font);
+}
+
 #Navbar > a {
 	display: inline-block;
 	font-size: 2em;
@@ -61,7 +121,7 @@ h3 {
 
 #Navbar a {
 	text-decoration: none;
-	color: black;
+	color: var(--navbar-font);
 }
 
 #Navbar > ul > li {
@@ -81,7 +141,7 @@ a.Anchor {
 #Main {
 	display: flex;
 	flex-direction: column;
-	background-color: lightgray;
+	background-color: var(--main-bg);
 
 	justify-content: center;
 	align-items: center;
@@ -91,16 +151,19 @@ a.Anchor {
 
 #Main > #Name {
 	font-size: 7vw;
+	color: var(--title-font);
 }
 
 #Main > #Subtitle {
 	font-size: 3vw;
+	color: var(--subtitle-font);
 }
 
 #Main > #MiniContact {
 	position: absolute;
 	bottom: 10px;
 	font-size: 2vw;
+	color: var(--minicontact-font);
 }
 
 #Main > #MiniContact > a {
@@ -108,12 +171,16 @@ a.Anchor {
 	text-decoration: none;
 }
 
+#Main > #MiniContact > .fab {
+	color: var(--minicontact-font);
+}
+
 /*--------------ABOUT--------------*/
 
 #AboutContent {
 	display: flex;
 	flex-direction: column;
-	background-color: pink;
+	background-color: var(--about-bg);
 
 }
 
@@ -126,16 +193,22 @@ a.Anchor {
 #AboutContent > .Content {
 	height: 100%;
 	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 #AboutContent > .Content > #Description {
-	width: 66%;
+	width: 50%;
 	padding: 30px;
+	margin: 30px;
+	background-color: var(--list-bg);
 }
 
 #AboutContent > .Content > #Skillset {
-	width: 33%;
+	width: 30%;
 	padding: 30px;
+	margin: 30px;
+	background-color: var(--list-bg);
 }
 
 #AboutContent ul {
@@ -147,16 +220,21 @@ a.Anchor {
 	float: right;
 }
 
-.ColoredStar {
-	color: orange;
+.fa-star {
+	color: var(--star-default);
 }
+
+.ColoredStar {
+	color: var(--star-colored);
+}
+
 
 /*--------------PORTFOLIO--------------*/
 
 #PortfolioContent {
 	display: flex;
 	flex-direction: column;
-	background-color: lightgreen;
+	background-color: var(--portfolio-bg);
 
 	justify-content: center;
 	align-items: center;
@@ -172,9 +250,9 @@ a.Anchor {
 	margin-top: 10px;
 	margin-bottom: 10px;
 
-	background-color: lightgray;
+	background-color: var(--list-bg);
 
-	color: black;
+	color: var(--list-font);
 	text-decoration: none;
 }
 
@@ -189,7 +267,7 @@ a.Anchor {
 #ContactContent {
 	display: flex;
 	flex-direction: column;
-	background-color: lightyellow;
+	background-color: var(--contact-bg);
 }
 
 /*--------------FOOTER--------------*/
@@ -197,7 +275,7 @@ a.Anchor {
 footer {
 	display: flex;
 	flex-direction: column;
-	background-color: lavenderblush;
+	background-color: var(--footer-bg);
 
 	justify-content: center;
 	align-items: center;
