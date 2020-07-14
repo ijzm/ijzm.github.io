@@ -209,14 +209,14 @@ a.Anchor {
 #AboutContent > .Content > #Description {
 	width: 50%;
 	padding: 30px;
-	margin: 30px;
+	margin: 10px;
 	background-color: var(--list-bg);
 }
 
 #AboutContent > .Content > #Skillset {
 	width: 30%;
 	padding: 30px;
-	margin: 30px;
+	margin: 10px;
 	background-color: var(--list-bg);
 }
 
@@ -280,13 +280,14 @@ a.Anchor {
 	display: flex;
 	flex-direction: column;
 
-	padding: 10px;
-	margin: 10px;
-
 	background-color: var(--list-bg);
 
 	color: var(--list-font);
 	text-decoration: none;
+
+	padding: 30px;
+	margin: 10px;
+	transition: 0.2s ease-in-out;
 }
 
 #PortfolioContent .List p:last-of-type {
@@ -302,10 +303,6 @@ a.Anchor {
 	display: inline-block;
 	width: auto;
 	max-width: calc(100% - 200px);
-}
-
-#GameJamList a {
-	transition: 0.2s ease-in-out;
 }
 
 #GameJamList a:hover {
