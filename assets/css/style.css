@@ -62,6 +62,7 @@ html, body {
 	margin: 0;
 	padding: 0;
     scroll-behavior: smooth;
+    background-color: var(--main-bg);
 }
 
 h1 {
@@ -138,6 +139,10 @@ a.Anchor {
     visibility: hidden;
 }
 
+.Container {
+	width: 80%;
+}
+
 /*--------------MAIN--------------*/
 
 #Main {
@@ -181,53 +186,55 @@ a.Anchor {
 
 #AboutContent {
 	display: flex;
+
 	flex-direction: column;
-	background-color: var(--about-bg);
-
-}
-
-#AboutContent > .Title {
-	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	background-color: var(--about-bg);
 }
 
-#AboutContent > .Content {
+#AboutContent .Title {
+
+}
+
+#AboutContent .Content {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	width: 100%;
 }
 
 @media screen and (max-width: 800px) {
-	#AboutContent > .Content {
+	#AboutContent .Content {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 	}
 }
 
-#AboutContent > .Content > #Description {
-	width: 50%;
+#AboutContent .Content #Description {
+	width: 60%;
 	padding: 30px;
 	margin: 10px;
 	background-color: var(--list-bg);
 }
 
-#AboutContent > .Content > #Skillset {
-	width: 30%;
+#AboutContent .Content #Skillset {
+	width: 40%;
 	padding: 30px;
 	margin: 10px;
 	background-color: var(--list-bg);
 }
 
 @media screen and (max-width: 800px) {
-	#AboutContent > .Content > #Description {
-		width: 80%;
+	#AboutContent .Content #Description {
+		width: 100%;
 	}
 }
 @media screen and (max-width: 800px) {
-	#AboutContent > .Content > #Skillset {
-		width: 80%;
+	#AboutContent .Content #Skillset {
+		width: 100%;
 	}
 }
 
