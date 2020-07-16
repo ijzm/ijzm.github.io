@@ -317,7 +317,7 @@ a.Anchor {
 	transition: 0.2s ease-in-out;
 }
 
-#PortfolioContent #GameJamList .List p:last-of-type {
+#PortfolioContent #GameJamList .List .MadeIn {
 	margin-top: auto;
 }
 
