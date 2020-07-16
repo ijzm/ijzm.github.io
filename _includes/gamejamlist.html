@@ -1,4 +1,4 @@
-<div id="GameJamList">
+<div id="GameJamList" class="PortfolioList">
 	<h1>
 		Game Jams:
 	</h1>
@@ -13,8 +13,10 @@
 			</h1>
 			<img src="/assets/Logos/{{game.title}}.png">
 			</div>
-			<p>{{game.desc}}</p>
-			<p> Made in {{game.time}} for the {{game.made}}</p>
+			<p class="en">{{game.desc}}</p>
+			<p class="es">{{game.desc_es}}</p>
+			<p class="en"> Made in {{game.time}} for the {{game.made}}.</p>
+			<p class="es"> Hecho en {{game.time_es}} para {{game.made}}.</p>
 		</a>
 	{% endfor %}
 	</div>

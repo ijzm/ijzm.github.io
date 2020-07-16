@@ -1,5 +1,23 @@
-<div id="ProjectList">
+<div id="ProjectList" class="PortfolioList">
 	<h1>
 		Projects:
 	</h1>
+	<div class="GridList">
+		{% assign ordered_projects = site.projects | sort: "display-order" %}
+		{% for project in ordered_projects reversed %}
+
+		<div class="List">
+			<div>
+			<h1 class="en">
+				{{project.title}}
+			</h1>
+			<h1 class="es">
+				{% if project.title_es %} {{project.title_es}} {% else %} {{project.title}} {% endif %}
+			</h1>
+			<p class="en">{{project.desc}}</p>
+			<p class="es">{{project.desc_es}}</p>
+			</div>
+		</div>
+	{% endfor %}
+	</div>
 </div>

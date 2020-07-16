@@ -31,8 +31,11 @@ github_username:  ijzm
 
 collections:
   gamejams:
-    output: true
-    permalink: /:collection/:path/
+    output: false
+  projects:
+    output: false
+  work:
+    output: false
 
 # Build settings
 theme: minima

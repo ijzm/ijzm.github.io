@@ -1,5 +1,20 @@
-<div id="WorkList">
+<div id="WorkList" class="PortfolioList">
 	<h1>
 		Work:
 	</h1>
+	<div class="GridList">
+		{% assign ordered_works = site.work | sort: "display-order" %}
+		{% for work in ordered_works reversed %}
+
+		<div class="List">
+			<div>
+			<h1>
+				{{work.title}}
+			</h1>
+			</div>
+			<p class="en">{{work.desc}}</p>
+			<p class="es">{{work.desc_es}}</p>
+		</div>
+	{% endfor %}
+	</div>
 </div>

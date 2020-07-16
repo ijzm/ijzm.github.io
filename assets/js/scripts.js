@@ -1,5 +1,9 @@
 $(document).ready(function() {
 	SetFooter();
+	if(getCookie("language") == "") {
+		setCookie("language", "english", 100);
+	}
+	changeLanguage(getCookie("language"));
 });
 
 
@@ -8,4 +12,63 @@ function SetFooter() {
 	var date = new Date();
 	var year = date.getFullYear();
 	document.getElementById("footer").innerHTML += year;
+}
+//Language
+function changeLanguage(language) {
+	var esElements = document.getElementsByClassName("es");
+	var enElements = document.getElementsByClassName("en");
+	var btnLanguage = document.getElementById("LanguageButton");
+
+	var esShow = "none";
+	var enShow = "none";
+
+	if(language == "spanish") {
+		esShow = "inline-block";
+		btnLanguage.innerHTML = "ES"
+	} else {
+		enShow = "inline-block";		
+		btnLanguage.innerHTML = "EN"
+	}
+
+	for (var i = 0; i < esElements.length; i++) {
+		esElements[i].style.display = esShow;
+	}
+
+	for (var i = 0; i < enElements.length; i++) {
+		enElements[i].style.display = enShow;
+	}
+}
+
+function languageButton() {
+	var language = getCookie("language");
+	if(language == "spanish") {
+		language = "english";
+	} else {
+		language = "spanish";
+	}
+	setCookie("language", language, 100);
+	changeLanguage(language);
+}
+//Cookies
+function setCookie(cookie_name, cookie_value, days_until_expiration) {
+	var d = new Date();
+	d.setTime(d.getTime() + (days_until_expiration*24*60*60*1000));
+	var expires = "expires="+ d.toUTCString();
+	document.cookie = cookie_name + "=" + cookie_value + ";" + expires + ";path=/";
+}
+
+function getCookie(cookie_name) {
+	var name = cookie_name + "=";
+	var decodedCookie = decodeURIComponent(document.cookie);
+	var ca = decodedCookie.split(';');
+	for(var i = 0; i <ca.length; i++) {
+		var c = ca[i];
+		while (c.charAt(0) == ' ') {
+			c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) {
+			return c.substring(name.length, c.length);
+		}
+	}
+	return "";
 }
