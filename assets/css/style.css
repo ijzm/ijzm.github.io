@@ -211,7 +211,7 @@ a.Anchor {
 	width: 100%;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
 	#AboutContent .Content {
 		flex-direction: column;
 		justify-content: center;
@@ -233,12 +233,12 @@ a.Anchor {
 	background-color: var(--list-bg);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
 	#AboutContent .Content #Description {
 		width: 100%;
 	}
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
 	#AboutContent .Content #Skillset {
 		width: 100%;
 	}
@@ -277,14 +277,14 @@ a.Anchor {
 	width: 80%;
 }
 
-#PortfolioContent > .PortfolioList > .GridList {
+.GridList {
 	width: 100%;
 	display: grid;
 	grid-template-columns: 50% 50%;
 	grid-auto-rows: 1fr;
 }
-@media screen and (max-width: 800px) {
-	#PortfolioContent > #GameJamList > .GridList {
+@media screen and (max-width: 1000px) {
+.GridList {
 		grid-template-columns: 100%;
 	}
 }
@@ -337,7 +337,48 @@ a.Anchor {
 #ContactContent {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	background-color: var(--contact-bg);
+}
+
+#ContactContent .ContactInfo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-color: var(--list-bg);
+	margin: 10px;
+	height: 150px;
+	line-height: 150px;
+	text-align: center;
+}
+
+#ContactContent #ContactEmail {
+	grid-column: 1 / 3;
+}
+@media screen and (max-width: 1000px) {
+	#ContactContent #ContactEmail {
+		grid-column: 1 / 2;
+	}
+}
+
+#ContactContent a {
+	text-decoration: none;
+}
+
+#ContactContent a:hover {
+	background-color: var(--list-bg-hover);
+}
+
+
+.ContactInfo .fab,
+.ContactInfo .fas {
+	font-size: 80px;
+	width: 80px;
+	height: : 80px;
+	margin-left: 30px;
+	float: left;
 }
 
 /*--------------FOOTER--------------*/
@@ -349,6 +390,8 @@ footer {
 
 	justify-content: center;
 	align-items: center;
+
+	margin-top: 100px;
 
 	height: 100px;
 }
