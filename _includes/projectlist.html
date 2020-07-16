@@ -1,8 +1,16 @@
 <div id="ProjectList" class="PortfolioList">
-	<h1>
+	<a class="Anchor" id="Projects"></a>
+	<a class="Expand" href="#Projects" onclick="RetractSection(this)" >
+	<h1 class="en">
+		<span class="fas fa-plus-square"></span>
 		Projects:
 	</h1>
-	<div class="GridList">
+	<h1 class="es">
+		<span class="fas fa-plus-square"></span>
+		Proyectos:
+	</h1>
+	</a>
+	<div class="GridList Expandable Retracted">
 		{% assign ordered_projects = site.projects | sort: "display-order" %}
 		{% for project in ordered_projects reversed %}
 

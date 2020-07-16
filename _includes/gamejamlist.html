@@ -1,8 +1,12 @@
 <div id="GameJamList" class="PortfolioList">
+	<a class="Anchor" id="GameJams"></a>
+	<a class="Expand" href="#GameJams" onclick="RetractSection(this)" >
 	<h1>
+		<span class="fas fa-plus-square"></span>
 		Game Jams:
 	</h1>
-	<div class="GridList">
+	</a>
+	<div class="GridList Expandable Retracted">
 		{% assign ordered_games = site.gamejams | sort: "display-order" %}
 		{% for game in ordered_games reversed %}
 

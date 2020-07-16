@@ -4,6 +4,11 @@ $(document).ready(function() {
 		setCookie("language", "english", 100);
 	}
 	changeLanguage(getCookie("language"));
+
+	var RetractedElements = document.getElementsByClassName("Retracted");
+	for(var i = 0; i < RetractedElements.length; i++) {
+		RetractedElements[i].style.opacity = 0;
+	}
 });
 
 
@@ -49,6 +54,30 @@ function languageButton() {
 	setCookie("language", language, 100);
 	changeLanguage(language);
 }
+
+function RetractSection(t) {
+	var element = t.nextElementSibling;
+	if(element.classList.contains("Retracted")) {
+		element.classList.remove("Retracted");
+		setTimeout(function () {
+			element.style.opacity = 1;
+		}, 20);
+	} else {
+		element.style.opacity = 0;
+		element.addEventListener('transitionend', function(e) {
+			element.classList.add("Retracted");
+		}, {
+			capture: false,
+			once: true,
+			passive: false
+		});
+	} 	
+
+	/*e.addEventListener("transitionend", function() {
+		console.log("ASD");
+	})*/
+}
+
 //Cookies
 function setCookie(cookie_name, cookie_value, days_until_expiration) {
 	var d = new Date();

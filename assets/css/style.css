@@ -277,12 +277,26 @@ a.Anchor {
 	width: 80%;
 }
 
+
 .GridList {
 	width: 100%;
 	display: grid;
 	grid-template-columns: 50% 50%;
 	grid-auto-rows: 1fr;
 }
+
+.Retracted {
+	display: none;
+}
+
+.PortfolioList .Expand {
+	text-decoration: none;
+}
+
+.Expandable {
+	transition: all 0.5s;
+}
+
 @media screen and (max-width: 1000px) {
 .GridList {
 		grid-template-columns: 100%;
@@ -330,7 +344,6 @@ a.Anchor {
 	max-width: 200px; 
 	float: right;
 }
-
 
 /*--------------CONTACT--------------*/
 
