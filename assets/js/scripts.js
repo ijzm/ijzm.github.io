@@ -59,6 +59,7 @@ function RetractSection(t) {
 	var element = t.nextElementSibling;
 	if(element.classList.contains("Retracted")) {
 		element.classList.remove("Retracted");
+		t.previousElementSibling.scrollIntoView();
 		setTimeout(function () {
 			element.style.opacity = 1;
 		}, 20);
@@ -71,7 +72,7 @@ function RetractSection(t) {
 			once: true,
 			passive: false
 		});
-	} 	
+	}
 
 	/*e.addEventListener("transitionend", function() {
 		console.log("ASD");
