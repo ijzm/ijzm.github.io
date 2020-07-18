@@ -84,8 +84,8 @@ function RetractSection(t) {
 }
 
 function ShowMenu() {
-	var x = document.getElementById("NavButtons");
-	x.classList.toggle("ResponsiveNavbar");
+	var element = document.getElementById("NavButtons");
+	element.classList.toggle("ResponsiveNavbar");
 }
 
 //Cookies
