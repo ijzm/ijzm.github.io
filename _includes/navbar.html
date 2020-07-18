@@ -14,35 +14,21 @@
 	<a id="NavbarLogo" href="#">
 		Ignacio Zevallos
 	</a>
-	<ul>
-		<li>
-			<a href="#About">
-				About
-			</a>
-		</li>
-		|
-		<li>
-			<a href="#Portfolio">
-				Portfolio
-			</a>
-		</li>
-		|
-		<li>
-			<a href="#Contact">
-				Contact
-			</a>
-		</li>
-		|
-		<li>
-			<a href="/Resume">
-				Resume
-			</a>
-		</li>
-		|
-		<li>
-			<a href="javascript:languageButton();" id="LanguageButton">
-				EN
-			</a>
-		</li>
-	</ul>
+	<a href="javascript:void(0);" id="NavbarMenu" onclick="ShowMenu(this)" class="fa fa-bars"></a>
+	<div id="NavButtons">
+		<a id="AboutButton" href="#About" onclick="ShowMenu()">
+			About
+		</a><p>|</p>
+		<a id="PortfolioButton" href="#Portfolio" onclick="ShowMenu()">
+			Portfolio
+		</a><p>|</p>
+		<a id="ContactButton" href="#Contact" onclick="ShowMenu()">
+			Contact
+		</a><p>|</p>
+		<a id="ResumeButton" href="/Resume" onclick="ShowMenu()">
+			Resume
+		</a><p>|</p>
+		<a href="javascript:languageButton();" id="LanguageButton">	
+			EN
+		</a>
 </nav>

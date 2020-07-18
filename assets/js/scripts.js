@@ -30,9 +30,17 @@ function changeLanguage(language) {
 	if(language == "spanish") {
 		esShow = "inline-block";
 		btnLanguage.innerHTML = "ES"
+		document.getElementById("AboutButton").innerHTML = "Acerca de"
+		document.getElementById("PortfolioButton").innerHTML = "Portafolio"
+		document.getElementById("ContactButton").innerHTML = "Contacto"
+		document.getElementById("ResumeButton").innerHTML = "Resumé"
 	} else {
 		enShow = "inline-block";		
 		btnLanguage.innerHTML = "EN"
+		document.getElementById("AboutButton").innerHTML = "About"
+		document.getElementById("PortfolioButton").innerHTML = "Portfolio"
+		document.getElementById("ContactButton").innerHTML = "Contact"
+		document.getElementById("ResumeButton").innerHTML = "Resumé"
 	}
 
 	for (var i = 0; i < esElements.length; i++) {
@@ -73,10 +81,11 @@ function RetractSection(t) {
 			passive: false
 		});
 	}
+}
 
-	/*e.addEventListener("transitionend", function() {
-		console.log("ASD");
-	})*/
+function ShowMenu() {
+	var x = document.getElementById("NavButtons");
+	x.classList.toggle("ResponsiveNavbar");
 }
 
 //Cookies
