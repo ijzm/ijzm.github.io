@@ -330,7 +330,7 @@ a.Anchor {
 	width: 100%;
 	display: grid;
 	grid-template-columns: 50% 50%;
-	grid-auto-rows: 1fr;
+	grid-auto-rows: auto;
 }
 
 .Retracted {
