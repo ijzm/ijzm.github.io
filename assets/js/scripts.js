@@ -1,4 +1,4 @@
-$(document).ready(function() {
+window.onload = function() {
 	SetFooter();
 	if(getCookie("language") == "") {
 		setCookie("language", "english", 100);
@@ -9,14 +9,17 @@ $(document).ready(function() {
 	for(var i = 0; i < RetractedElements.length; i++) {
 		RetractedElements[i].style.opacity = 0;
 	}
-});
+};
 
 
 //Sets the Year in the Footer Section
 function SetFooter() {
 	var date = new Date();
 	var year = date.getFullYear();
-	document.getElementById("footer").innerHTML += year;
+	var footer = document.getElementById("footer")
+	if(footer != null) {
+		footer.innerHTML += year;
+	}
 }
 //Language
 function changeLanguage(language) {

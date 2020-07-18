@@ -274,6 +274,18 @@ a.Anchor {
 	color: var(--h1-font); 
 }
 
+#AboutContent .Content #Photo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 200px;
+}
+
+#AboutContent .Content #Photo img {
+	height: 100%;
+	border-radius: 50%;
+}
+
 #AboutContent .Content #Skillset {
 	width: 40%;
 	padding: 30px;
@@ -460,4 +472,33 @@ footer {
 	margin-top: 100px;
 
 	height: 100px;
+}
+
+/*--------------RESUME--------------*/
+
+#Resume {
+	width: 100%;
+	height: 100%;
+}
+
+#Download {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+
+	background-color: var(--navbar-bg);
+
+	position: absolute;
+	bottom: 50px;
+	left:  50px;
+
+	font-size: 60px;
+}
+
+#Download:hover {
+	background-color: var(--list-bg-hover);
 }
