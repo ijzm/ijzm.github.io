@@ -1,32 +1,15 @@
-/*Variables*/
+/*----------GLOBAL VARIABLES----------*/
 :root {
-	--navbar-bg:    #0B0C10;
-	--main-bg:      #1F2833;
-	--about-bg:     #1F2833;
-	--portfolio-bg: #1F2833;
-	--contact-bg:   #1F2833;
-	--footer-bg:    #0B0C10;
+	--default-font:        #C5C6C7;
+	--default-font-hover:  #E0E0E0;
+	--accent-font:         #66FCF1;
 
-	--navbar-main-font: #66FCF1;
-	--navbar-font:      #C5C6C7;
-
-	--title-font:       #66FCF1;
-	--subtitle-font:    #C5C6C7;
-	--minicontact-font: #C5C6C7;
-	--minicontact-hover:#E0E0E0;
-
-	--h1-font:          #66FCF1;
-	--h2-font:          #66FCF1;
-	--default-font:     #C5C6C7;
-
-	--star-default:     #C5C6C7;
-	--star-colored:     #66FCF1;
-
-	--list-bg:          #0B0C10;
-	--list-bg-hover:    #191B24;
-	--list-font:        #C5C6C7;
+	--background-bg:       #1F2833;
+	--container-bg:        #0B0C10;
+	--container-bg-hover:  #191B24;
 }
 
+/*--------------DEFAULTS--------------*/
 * {
 	font-family: 'Roboto Mono', monospace;
 	color: var(--default-font);
@@ -38,21 +21,21 @@ html, body {
 	margin: 0;
 	padding: 0;
     scroll-behavior: smooth;
-    background-color: var(--main-bg);
+    background-color: var(--background-bg);
 }
 
 h1 {
 	width: 100%;
 	font-size: 3em;
 	margin: 0;
-	color: var(--h1-font);
+	color: var(--accent-font);
 }
 
 h2 {
 	width: 100%;
 	font-size: 2em;
 	margin: 0;
-	color: var(--h2-font);
+	color: var(--accent-font);
 }
 
 h3 {
@@ -78,8 +61,8 @@ h3 {
 
 	padding-left: 30px;
 
-	background-color: var(--navbar-bg);
-	color: var(--navbar-main-font);
+	background-color: var(--container-bg);
+	color: var(--default-font);
 
 
 	font-size: 100%;
@@ -97,6 +80,11 @@ h3 {
 }
 
 #NavButtons a {
+	transition: 0.2s ease-in-out;
+}
+
+#NavButtons a:hover {
+	color: var(--default-font-hover);
 }
 
 #NavButtons p {
@@ -130,14 +118,14 @@ h3 {
 		line-height: 100px;
 		font-size: 2em;
 		text-align: left;
-		background-color: var(--navbar-bg);
-		border-color: var(--h1-font);
+		background-color: var(--container-bg);
+		border-color: var(--accent-font);
 		border-width: 1px;
 		border-style: solid;
 	}
 
 	#NavButtons.ResponsiveNavbar a:hover {
-		background-color: var(--list-bg-hover);
+		background-color: var(--container-bg-hover);
 	}
 
 	#NavButtons p {
@@ -147,7 +135,7 @@ h3 {
 }
 
 #Navbar > #NavbarLogo {
-	color: var(--navbar-main-font);
+	color: var(--accent-font);
 }
 
 #Navbar > a {
@@ -157,7 +145,7 @@ h3 {
 
 #Navbar a {
 	text-decoration: none;
-	color: var(--navbar-font);
+	color: var(--default-font);
 }
 
 #Navbar #NavbarMenu {
@@ -193,7 +181,7 @@ a.Anchor {
 #Main {
 	display: flex;
 	flex-direction: column;
-	background-color: var(--main-bg);
+	background-color: var(--background-bg);
 
 	justify-content: center;
 	align-items: center;
@@ -203,29 +191,29 @@ a.Anchor {
 
 #Main > #Name {
 	font-size: 7vw;
-	color: var(--title-font);
+	color: var(--accent-font);
 }
 
 #Main > #Subtitle {
 	font-size: 3vw;
-	color: var(--subtitle-font);
+	color: var(--default-font);
 }
 
 #Main > #MiniContact {
 	position: absolute;
 	bottom: 10px;
 	font-size: 2em;
-	color: var(--minicontact-font);
+	color: var(--default-font);
 }
 
 #Main > #MiniContact > a {
-	color: var(--minicontact-font);
+	color: var(--default-font);
 	text-decoration: none;
 	transition: 0.2s ease-in-out;
 }
 
 #Main > #MiniContact > a:hover {
-	color: var(--minicontact-hover);
+	color: var(--default-font-hover);
 }
 /*--------------ABOUT--------------*/
 
@@ -236,7 +224,7 @@ a.Anchor {
 	justify-content: center;
 	align-items: center;
 
-	background-color: var(--about-bg);
+	background-color: var(--background-bg);
 }
 
 #AboutContent .Title {
@@ -262,7 +250,7 @@ a.Anchor {
 	width: 60%;
 	padding: 30px;
 	margin: 10px;
-	background-color: var(--list-bg);
+	background-color: var(--container-bg);
 }
 
 #AboutContent .Content #Description p {
@@ -271,7 +259,7 @@ a.Anchor {
 	display: block;
 }
 #AboutContent .Content #Description span {
-	color: var(--h1-font); 
+	color: var(--accent-font); 
 }
 
 #AboutContent .Content #Photo {
@@ -290,7 +278,7 @@ a.Anchor {
 	width: 40%;
 	padding: 30px;
 	margin: 10px;
-	background-color: var(--list-bg);
+	background-color: var(--container-bg);
 }
 
 @media screen and (max-width: 1000px) {
@@ -314,11 +302,11 @@ a.Anchor {
 }
 
 .fa-star {
-	color: var(--star-default);
+	color: var(--default-font);
 }
 
 .ColoredStar {
-	color: var(--star-colored);
+	color: var(--accent-font);
 }
 
 
@@ -327,7 +315,7 @@ a.Anchor {
 #PortfolioContent {
 	display: flex;
 	flex-direction: column;
-	background-color: var(--portfolio-bg);
+	background-color: var(--background-bg);
 
 	justify-content: center;
 	align-items: center;
@@ -369,9 +357,9 @@ a.Anchor {
 	display: flex;
 	flex-direction: column;
 
-	background-color: var(--list-bg);
+	background-color: var(--container-bg);
 
-	color: var(--list-font);
+	color: var(--default-font);
 	text-decoration: none;
 
 	padding: 30px;
@@ -392,7 +380,7 @@ a.Anchor {
 }
 
 #GameJamList a:hover {
-	background-color: var(--list-bg-hover);
+	background-color: var(--container-bg-hover);
 }
 
 #PortfolioContent #GameJamList .GridList .List img {
@@ -428,7 +416,7 @@ a.Anchor {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--contact-bg);
+	background-color: var(--background-bg);
 }
 
 #ContactContent .ContactInfo {
@@ -436,7 +424,7 @@ a.Anchor {
 	justify-content: center;
 	align-items: center;
 
-	background-color: var(--list-bg);
+	background-color: var(--container-bg);
 	margin: 10px;
 	height: 150px;
 	line-height: 150px;
@@ -460,7 +448,7 @@ a.Anchor {
 }
 
 #ContactContent a:hover {
-	background-color: var(--list-bg-hover);
+	background-color: var(--container-bg-hover);
 }
 
 
@@ -478,7 +466,7 @@ a.Anchor {
 footer {
 	display: flex;
 	flex-direction: column;
-	background-color: var(--footer-bg);
+	background-color: var(--container-bg);
 
 	justify-content: center;
 	align-items: center;
@@ -492,11 +480,12 @@ footer {
 
 #Resume {
 	width: 100%;
-	height: 100%;
+	height: calc(100% - 50px);
 	margin-top: 50px;
 }
 @media screen and (max-width: 1000px) {
 	#Resume {
+		height: calc(100% - 100px);
 		margin-top: 100px;
 	}
 }
@@ -510,7 +499,7 @@ footer {
 	height: 100px;
 	border-radius: 50%;
 
-	background-color: var(--navbar-bg);
+	background-color: var(--container-bg);
 
 	position: absolute;
 	bottom: 50px;
@@ -520,5 +509,5 @@ footer {
 }
 
 #Download:hover {
-	background-color: var(--list-bg-hover);
+	background-color: var(--container-bg	-hover);
 }
