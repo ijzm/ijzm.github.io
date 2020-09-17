@@ -1,5 +1,6 @@
 window.onload = function() {
 	SetFooter();
+	SetAge();
 	if(getCookie("language") == "") {
 		setCookie("language", "english", 100);
 	}
@@ -21,6 +22,26 @@ function SetFooter() {
 		footer.innerHTML += year;
 	}
 }
+//Sets my age
+function SetAge() {
+	var date = new Date();
+	//Should be off for about a day
+	var birthdate = new Date("1999-08-09");
+	var diff = date - birthdate;
+	var diffDate = new Date(diff); 
+
+	var year = Math.abs(diffDate.getUTCFullYear() - 1970);
+	//Should fix this
+	var ageES = document.getElementById("AgeES");
+	var ageEN = document.getElementById("AgeEN");
+	if(ageES != null) {
+		ageES.innerHTML = year;
+	}
+	if(ageEN != null) {
+		ageEN.innerHTML = year;
+	}
+}
+
 //Language
 function changeLanguage(language) {
 	var esElements = document.getElementsByClassName("es");
