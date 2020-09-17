@@ -258,7 +258,7 @@ a.Anchor {
 	font-size: 1.5em;
 	display: block;
 }
-#AboutContent .Content #Description span {
+#AboutContent .Content #Description .MiniHeader {
 	color: var(--accent-font); 
 }
 
