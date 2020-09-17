@@ -57,14 +57,14 @@ function changeLanguage(language) {
 		document.getElementById("AboutButton").innerHTML = "Acerca de"
 		document.getElementById("PortfolioButton").innerHTML = "Portafolio"
 		document.getElementById("ContactButton").innerHTML = "Contacto"
-		document.getElementById("ResumeButton").innerHTML = "Resumé"
+		//document.getElementById("ResumeButton").innerHTML = "Resumé"
 	} else {
 		enShow = "inline-block";		
 		btnLanguage.innerHTML = "EN"
 		document.getElementById("AboutButton").innerHTML = "About"
 		document.getElementById("PortfolioButton").innerHTML = "Portfolio"
 		document.getElementById("ContactButton").innerHTML = "Contact"
-		document.getElementById("ResumeButton").innerHTML = "Resumé"
+		//document.getElementById("ResumeButton").innerHTML = "Resumé"
 	}
 
 	for (var i = 0; i < esElements.length; i++) {
