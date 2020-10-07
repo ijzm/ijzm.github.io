@@ -8,6 +8,20 @@
 	--container-bg:        #0B0C10;
 	--container-bg-hover:  #191B24;
 }
+/*--------------FONTS--------------*/
+/* roboto-mono-regular - latin */
+@font-face {
+	font-family: 'Roboto Mono';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/assets/fonts/roboto-mono-v12-latin-regular.eot'); /* IE9 Compat Modes */
+	src: local(''),
+		url('/assets/fonts/roboto-mono-v12-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('/assets/fonts/roboto-mono-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+		url('/assets/fonts/roboto-mono-v12-latin-regular.woff') format('woff'), /* Modern Browsers */
+		url('/assets/fonts/roboto-mono-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('/assets/fonts/roboto-mono-v12-latin-regular.svg#RobotoMono') format('svg'); /* Legacy iOS */
+}
 
 /*--------------DEFAULTS--------------*/
 * {
