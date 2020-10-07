@@ -379,6 +379,7 @@ a.Anchor {
 	max-width: calc(100% - 200px);
 }
 
+#ProjectList .GridList a:hover,
 #GameJamList a:hover {
 	background-color: var(--container-bg-hover);
 }

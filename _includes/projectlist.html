@@ -14,7 +14,11 @@
 		{% assign ordered_projects = site.projects | sort: "display-order" %}
 		{% for project in ordered_projects reversed %}
 
+		{% if project.project_url %} 
+		<a href="{{project.project_url}}" class="List">
+		{% else %}
 		<div class="List">
+		{% endif %}
 			<div>
 			<h1 class="en">
 				{{project.title}}
@@ -25,7 +29,12 @@
 			<p class="en">{{project.desc}}</p>
 			<p class="es">{{project.desc_es}}</p>
 			</div>
+
+		{% if project.project_url %} 
+		</a>
+		{% else %}
 		</div>
+		{% endif %}
 	{% endfor %}
 	</div>
 </div>
