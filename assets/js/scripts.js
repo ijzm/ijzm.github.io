@@ -1,4 +1,4 @@
-window.onload = function() {
+window.addEventListener('load', function() {
 	SetFooter();
 	SetAge();
 	if(getCookie("language") == "") {
@@ -10,7 +10,7 @@ window.onload = function() {
 	for(var i = 0; i < RetractedElements.length; i++) {
 		RetractedElements[i].style.opacity = 0;
 	}
-};
+});
 
 
 //Sets the Year in the Footer Section
