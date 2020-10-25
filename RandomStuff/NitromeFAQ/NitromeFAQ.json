@@ -1,0 +1,95 @@
+{
+	"Categories": {
+		"Games": [
+			{
+				"q": "Will you port X to HTML5?",
+				"a": [
+					[
+						"Yes it will be all the flash games"
+					]
+				],
+				"s": [
+					"https://twitter.com/Nitrome/status/1265068261214994432"
+				]
+			},
+			{
+				"q": "What happened to Flightless?",
+				"a": [
+					[
+						"With flightless incase nobody realised what happened.",
+						"We made a demo to put onto steam. It went into steam green light to get voted up onto steam.",
+						"It sat there for months getting love but not enough to get it greenlit onto the platform. So we took that as a sign we should move on.",
+						"A while after doing so steam decided to change the rules and allow a lower entry bar to greenlight making 100’s of games overnight get the go ahead.",
+						"But by then our teams had moved onto other projects. I think even the artist had moved countries to another job as he hated living in london."
+					]
+				],
+				"s": [
+					"https://discordapp.com/channels/562237998578794497/562237999098757121/696165064620769300"
+				]
+			},
+			{
+				"q": "What happened to Super Feed Me?",
+				"a": [
+					[
+						"SuperFeedMe is unlikely to ever get finished. Its been like a decade without is working on it so really shouldn’t be much or a surprise by now."
+					],
+					[
+						"We have no plans to finish this game atm. Its been a decade so sorry if this comes as a shock"
+					]
+				],
+				"s": [
+					"https://discordapp.com/channels/562237998578794497/562237999098757121/621129823099813899",
+					"https://twitter.com/Nitrome/status/1284860097030770688"
+				]
+			}
+		],
+		"Website": [
+			{
+				"q": "What happened to Accounts?",
+				"a": [
+					[
+						"We were forced to remove the accounts due to the GDPR enrolment. Users data cannot be stored without prior permission and accounts stored details that invalidated this."
+					]
+				],
+				"s": [
+					"https://discordapp.com/channels/562237998578794497/562237999098757121/727957506802057239"
+				]
+			},
+			{
+				"q": "What happened to the New Website?",
+				"a": [
+					[
+						"Its currently not being worked on but our goal is still to revamp the site and make it available in the future (no dates or commitments, just ideals)."
+					]
+				],
+				"s": [
+					"https://discordapp.com/channels/562237998578794497/562237999098757121/578197115449114653"
+				]
+			}
+		],
+		"Music": [
+			{
+				"q": "Why can't we buy/stream Nitrome Music?",
+				"a": [
+					[
+						"Yeah sorry, there just is a very small vocal minority of fans that care about the music enough to download. We took that it was worth perusing but it really is just too time consuming for what its worth. sorry"
+					]
+				],
+				"s": [
+					"https://discordapp.com/channels/562237998578794497/570279005278961708/724562025279389768"
+				]
+			},
+			{
+				"q": "Can I make and distribute a Nitrome Music Album?",
+				"a": [
+					[
+						"We wouldn’t give permission for anyone to make or sell collections. Sorry!"
+					]
+				],
+				"s": [
+					"https://discordapp.com/channels/562237998578794497/562237999098757121/646352512617807892"
+				]
+			}
+		]
+	}
+}

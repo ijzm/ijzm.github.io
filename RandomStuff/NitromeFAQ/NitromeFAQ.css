@@ -1,0 +1,67 @@
+/*----------GLOBAL VARIABLES----------*/
+/*:root {
+	--default-font:        #FFFFFF;
+	--default-font-hover:  #E0E0E0;
+	--accent-font:         #ffbdc7;
+
+	--background-bg:       #331122;
+	--container-bg:        #dc2856;
+	--container-bg-hover:  #191B24;
+
+}*/
+
+#NitromeFAQ {
+	padding-top: 100px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#NitromeFAQ h1 {
+	display: flex;
+}
+
+#NitromeFAQ #FAQ {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.Question {
+	display: flex;
+	flex-direction: column;
+
+	background-color: var(--container-bg);
+	width: 100%;
+	padding: 30px;
+	margin-top: 30px;
+}
+
+.Question h1 {
+}
+
+.Question a {
+	margin-top: 30px;
+	text-decoration: none;
+
+	border-left: 3px solid var(--accent-font);
+	margin-left: 20px;
+	padding-left: 20px;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	background-color: var(--container-bg);
+	background: linear-gradient(to left, var(--container-bg) 50%, var(--container-bg-hover) 50%) right;
+	background-size: 200%;
+	transition: .3s ease-out;
+
+}
+
+.Question a:hover {
+	color: var(--default-font-hover);
+	background-position: left;
+}
