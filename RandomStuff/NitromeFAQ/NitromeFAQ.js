@@ -35,6 +35,7 @@ function RenderPage(data) {
 		var htmlCategoryText = document.createElement("h1");
 		htmlCategoryText.innerHTML = CurrentCategory;
 		htmlCategory.append(htmlCategoryText);
+		htmlCategory.id = CurrentCategory;
 
 		Object.keys(Category).forEach(function(CurrentQuestion){
 			var Question = Category[CurrentQuestion];
