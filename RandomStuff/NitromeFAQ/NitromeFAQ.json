@@ -1,5 +1,18 @@
 {
 	"Categories": {
+		"Flash": [
+			{
+				"q": "Now that Flash is dead. Is there a way to play the browser games?",
+				"a": [
+					[
+						"Yes. Click here for a guide on how to use Flash content after Flash's End of Life"
+					]
+				],
+				"s": [
+					"../FlashFAQ"
+				]
+			}
+		],
 		"Games": [
 			{
 				"q": "Will you port X to HTML5?",

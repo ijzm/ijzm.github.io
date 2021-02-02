@@ -42,6 +42,7 @@ function RenderPage(data) {
 
 			var htmlQuestion = document.createElement("div");
 			htmlQuestion.classList.add("Question");
+			htmlQuestion.classList.add("FullBox");
 			htmlQuestionText = document.createElement("h1");
 			htmlQuestionText.innerHTML = Question.q;
 			htmlQuestion.append(htmlQuestionText);
