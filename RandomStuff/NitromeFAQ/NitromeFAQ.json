@@ -102,6 +102,27 @@
 				"s": [
 					"https://discordapp.com/channels/562237998578794497/562237999098757121/646352512617807892"
 				]
+			},
+			{
+				"q": "Where can I download Nitrome music?",
+				"a": [
+					[
+						"The best way to obtain Nitrome music in high quality is to download it directly from the composers. See a list of all available Nitrome music to download or stream here.",
+						"",
+						"The availability of all Nitrome music depends on the composer. The list has more details, but I'll touch on the two main Nitrome composers here.",
+						"",
+						"All of Lee Nicklen's Nitrome music is available to download and/or stream from either his YouTube, SoundCloud or official website. Although a lot of his music on his official site is presented with interruptions, there are also some versions of those same tracks on his official website behind the scenes.",
+						"",
+						"Dave Cowen is trickier. The only track of his you can publicly download is the Twin Shot game theme from his Bandcamp. Some other Nitrome music he's composed for is available to stream on SoundCloud. He doesn't really have everything.",
+						"",
+						"You could try contacting Dave Cowen for the release of his Nitrome music. He has seemed willing to allow others to download it. But I personally haven't had much success reaching out to him.", 
+						"",
+						"If you're lucky enough, you might find someone who has purchased a bunch of Nitrome music back when it was on iTunes and they'll let you in on their goods. Otherwise, you'd have to extract the music directly from the games or record it, or find someone else who has previously done these things."
+					]
+				],
+				"s": [
+					"../NitromeMusic"
+				]
 			}
 		]
 	}
