@@ -1,0 +1,74 @@
+#PortfolioContent {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--background-bg);
+
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+}
+
+#PortfolioContent .PortfolioList {
+	width: 100%;
+}
+
+
+.GridList {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-auto-rows: auto;
+}
+
+.Retracted {
+	display: none;
+}
+
+.PortfolioList .Expand {
+	text-decoration: none;
+}
+
+.Expandable {
+	transition: all 0.5s;
+}
+
+#PortfolioContent .List {
+	display: flex;
+	flex-direction: column;
+
+	background-color: var(--container-bg);
+
+	color: var(--default-font);
+	text-decoration: none;
+
+	padding: 30px;
+	margin: 10px;
+	transition: 0.2s ease-in-out;
+}
+
+#PortfolioContent #GameJamList .List .MadeIn {
+	margin-top: auto;
+}
+
+#PortfolioContent #GameJamList > div h1 {
+	display: inline-block;
+	width: auto;
+	max-width: calc(100% - 200px);
+}
+
+#ProjectList .GridList a:hover,
+#GameJamList a:hover {
+	background-color: var(--container-bg-hover);
+}
+
+#PortfolioContent #GameJamList .GridList .List img {
+	display: inline-block;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	width: auto;
+	height: auto;
+
+	max-width: 200px; 
+	float: right;
+}

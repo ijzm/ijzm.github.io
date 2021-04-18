@@ -1,0 +1,109 @@
+---
+layout: default
+
+title: Nitrome Betas
+description: "List of Nitrome HTML5 betas released by Nitrome and Poki."
+
+nitromebetas: 
+    Skywire:
+        url: https://poki.com/en/preview/0a438e4c-bf79-470b-a99c-430050ee81b5/2d260fae-1b63-4dde-8c6d-f949dab9a036
+        img: skywire.png
+
+    Mutiny:
+        url: https://poki.com/en/preview/bfcd0ecd-2b89-4942-888d-b950c0bc5145/134a0e09-5632-4d6e-9425-4a20f299aadd
+        img: mutiny.png
+
+    Twin Shot 2:
+        url: https://poki.com/en/preview/4c19f030-cc53-40eb-a263-dc0d111e504c/a0616e64-ed1a-477b-80c6-94ec473d7406
+        img: twinshot2.png
+
+    Test Subject Green:
+        url: https://poki.com/en/preview/76e37137-bd45-4fe6-a9fc-09e7dd78edd5/c44e9cce-d0ef-464a-9c9a-218ccf43feb3
+        img: testsubjectgreen.png
+
+    Double Edged:
+        url: https://poki.com/en/preview/15b309e6-d572-4918-8a7d-f5daf2ba126b/2d6931be-4ba9-4432-a36e-7769b6d5d8d2
+        img: doubleedged.png
+
+    Nitrome Must Die:
+        url: https://poki.com/en/preview/19d8f927-ae3c-426c-bca1-db1d14328c74/c118535f-5078-4adc-b553-0b82a9e8803b
+        img: nitromemustdie.png
+
+    Skywire 2:
+        url: https://poki.com/en/preview/49cdd764-f086-47f1-bcd3-208da1e799d8/c09cdbb6-b6ed-4833-bdfa-0cd8437473e3
+        img: skywire2.png
+
+    BC Bow Contest:
+        url: https://poki.com/en/preview/015cbca9-cfc8-45ce-ae9e-1f0e4d74f208/f469e1d3-8cc3-4f0c-952e-ae24272d7df3
+        img: bcbowcontest.png
+
+    Final Ninja:
+        url: https://poki.com/en/preview/df0cbd66-43de-4305-9a9d-39a1b0fab45a/f8b9f5d1-f81f-48bb-bd56-e1aa39fb1463
+        img: finalninja.png
+
+    Avalanche:
+        url: https://poki.com/en/preview/9db936e0-44ce-43d9-8d09-2b562a444041/af8b3244-6138-4321-aba2-cf143b838336
+        img: avalanche.png
+
+    Silly Sausage:
+        url: https://poki.com/en/preview/8ae074fc-d9cb-42ae-be28-7560d95be9e1/585d22fc-1ca3-45d6-a6da-4d6498c8a3c6
+        img: sillysausage.png
+
+    Rubble Trouble New York:
+        url: https://poki.com/en/preview/b9c61c2c-ef0b-4b32-8df8-f2dcfc8e85d8/42343c6c-8d32-4c64-a421-66349dbc1f9b
+        img: rubbletroublenewyork.png
+
+    Test Subject Arena:
+        url: https://poki.com/en/preview/5b4df4d7-cadb-4a5c-b307-683cd457bca7/9ffb395c-74de-43cc-b95d-6fa2caabd7ad
+        img: testsubjectarena.png
+
+    Calamari:
+        url: https://poki.com/en/preview/7a4442e2-855d-4817-a807-6378bc66283d/ed256b97-c792-4941-a322-e017776c2b19
+        img: calamari.png
+
+    Bullethead:
+        url: https://poki.com/en/preview/45628b40-7cb2-40f2-8698-d81b15785974/4cda5bef-1edd-4eac-bcea-22a9c6d9095f
+        img: bullethead.png
+---
+<style>
+.NitromeBetaGame {
+	justify-content: center;
+	align-items: center;
+
+	display: inline-flex;
+
+	font-size: 2em;
+}
+
+.NitromeBetaGame img {
+	margin-right: 30px;
+}
+
+</style>
+
+<div class="Container">
+
+<h1>
+	Nitrome Betas
+</h1>
+<div id="BetaLists">
+	<p>
+		Current list of Nitrome Betas avalible unlisted on Poki.
+	</p>
+	<p>
+		Last Update Aprin 18, 2021
+	</p>
+	<p>
+		Special thanks to CritterCipher#5887 for compiling the initial list of links!
+	</p>
+
+	{% assign sorted_nitromebetas = page.nitromebetas | sort %}
+	{% for i in sorted_nitromebetas %}
+		<a href="{{ i[1].url }}" class="Button NitromeBetaGame">
+		<img src="./Logos/{{i[1].img }}" alt="{{ i[0] }} Logo">
+		{{ i[0] }}
+		</a>
+	{% endfor %}
+</div>
+
+</div>

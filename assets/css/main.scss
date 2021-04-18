@@ -1,0 +1,99 @@
+---
+---
+@import "desktop/navbar.scss";
+@import "desktop/footer.scss";
+@import "desktop/main.scss";
+@import "desktop/about.scss";
+@import "desktop/portfolio.scss";
+@import "desktop/contact.scss";
+@import "desktop/resume.scss";
+@import "desktop/FlashFAQ.scss";
+
+@import "mobile/navbar.scss";
+@import "mobile/FlashFAQ.scss";
+
+/*----------GLOBAL VARIABLES----------*/
+:root {
+	--default-font:        #C5C6C7;
+	--default-font-hover:  #E0E0E0;
+	--accent-font:         #66FCF1;
+
+	--background-bg:       #1F2833;
+	--container-bg:        #0B0C10;
+	--container-bg-hover:  #191B24;
+}
+/*--------------FONTS--------------*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
+/*--------------DEFAULTS--------------*/
+* {
+	font-family: 'Roboto Mono', monospace;
+	color: var(--default-font);
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+    scroll-behavior: smooth;
+    background-color: var(--background-bg);
+}
+
+h1 {
+	width: 100%;
+	font-size: 3em;
+	margin: 0;
+	color: var(--accent-font);
+}
+
+h2 {
+	width: 100%;
+	font-size: 2em;
+	margin: 0;
+	color: var(--accent-font);
+}
+
+h3 {
+	width: 100%;
+	font-size: 1.5em;
+	margin: 0;
+}
+
+.es {
+	display: none;
+}
+
+.FullBox {
+	width: 100%;
+	background-color: var(--container-bg);
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 30px;
+}
+
+.FlexList {
+	width: 100%;
+	display: flex;
+}
+
+.Button {
+	display: flex;
+	margin-top: 30px;
+	text-decoration: none;
+
+	border-left: 3px solid var(--accent-font);
+	margin-left: 20px;
+	padding-left: 20px;
+
+	padding: 30px;
+
+	background-color: var(--container-bg);
+	background: linear-gradient(to left, var(--container-bg) 50%, var(--container-bg-hover) 50%) right;
+	background-size: 200%;
+	transition: .3s ease-out;
+}
+
+.Button:hover {
+	color: var(--default-font-hover);
+	background-position: left;
+}
