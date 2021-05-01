@@ -4,15 +4,52 @@ layout: default
 title: Nitrome HTML5 Betas
 description: "List of Nitrome HTML5 betas released by Nitrome and Poki."
 
-nitromebetas: 
-    Skywire:
+nitromereleases:
+    Coil:
+        url: https://poki.com/en/preview/0a438e4c-bf79-470b-a99c-430050ee81b5/2d260fae-1b63-4dde-8c6d-f949dab9a036
+        img: coil.png
+
+    Bad Ice-Cream 2:
+        url: https://poki.com/en/preview/0a438e4c-bf79-470b-a99c-430050ee81b5/2d260fae-1b63-4dde-8c6d-f949dab9a036
+        img: badicecream2.png
+
+    Bad Ice-Cream 3:
+        url: https://poki.com/en/preview/0a438e4c-bf79-470b-a99c-430050ee81b5/2d260fae-1b63-4dde-8c6d-f949dab9a036
+        img: badicecream3.png
+
+    Cave Chaos 2:
+        url: https://poki.com/en/preview/0a438e4c-bf79-470b-a99c-430050ee81b5/2d260fae-1b63-4dde-8c6d-f949dab9a036
+        img: cavechaos2.png
+
+    Test Subject Blue:
+        url: https://poki.com/en/preview/0a438e4c-bf79-470b-a99c-430050ee81b5/2d260fae-1b63-4dde-8c6d-f949dab9a036
+        img: testsubjectblue.png
+
+    Bad Ice-Cream:
+        url: https://poki.com/en/preview/0a438e4c-bf79-470b-a99c-430050ee81b5/2d260fae-1b63-4dde-8c6d-f949dab9a036
+        img: badicecream.png
+
+    Cold Storage:
+        url: https://poki.com/en/preview/0a438e4c-bf79-470b-a99c-430050ee81b5/2d260fae-1b63-4dde-8c6d-f949dab9a036
+        img: coldstorage.png
+
+    Cave Chaos:
+        url: https://poki.com/en/preview/0a438e4c-bf79-470b-a99c-430050ee81b5/2d260fae-1b63-4dde-8c6d-f949dab9a036
+        img: cavechaos.png
+
+    Twin Shot:
         url: https://poki.com/en/preview/0a438e4c-bf79-470b-a99c-430050ee81b5/2d260fae-1b63-4dde-8c6d-f949dab9a036
         img: skywire.png
 
     Mutiny:
-        url: https://poki.com/en/preview/bfcd0ecd-2b89-4942-888d-b950c0bc5145/134a0e09-5632-4d6e-9425-4a20f299aadd
-        img: mutiny.png
+        url: https://poki.com/en/preview/0a438e4c-bf79-470b-a99c-430050ee81b5/2d260fae-1b63-4dde-8c6d-f949dab9a036
+        img: skywire.png
 
+    Skywire:
+        url: https://poki.com/en/preview/0a438e4c-bf79-470b-a99c-430050ee81b5/2d260fae-1b63-4dde-8c6d-f949dab9a036
+        img: skywire.png
+
+nitromebetas: 
     Twin Shot 2:
         url: https://poki.com/en/preview/4c19f030-cc53-40eb-a263-dc0d111e504c/a0616e64-ed1a-477b-80c6-94ec473d7406
         img: twinshot2.png
@@ -66,44 +103,61 @@ nitromebetas:
         img: bullethead.png
 ---
 <style>
-.NitromeBetaGame {
-	justify-content: center;
-	align-items: center;
+	.NitromeBetaGame {
+		justify-content: center;
+		align-items: center;
 
-	display: inline-flex;
+		display: inline-flex;
 
-	font-size: 2em;
-}
+		font-size: 2em;
+	}
 
-.NitromeBetaGame img {
-	margin-right: 30px;
-}
-
+	.NitromeBetaGame img {
+		margin-right: 30px;
+	}
 </style>
 
 <div class="Container">
 
-<h1>
-	Nitrome HTML5 Betas
-</h1>
-<div id="BetaLists">
-	<p>
-		Current list of Nitrome HTML5 Betas avalible unlisted on Poki.
-	</p>
-	<p>
-		Last Update April 18, 2021
-	</p>
-	<p>
-		Special thanks to CritterCipher#5887 for compiling the initial list of links!
-	</p>
+	<h1>
+		Nitrome HTML5 Official Releases
+	</h1>
+	<div class="BetaLists">
+		<p>
+			Current list of Nitrome HTML5 Official releases, available at Nitrome.com
+		</p>
 
-	{% assign sorted_nitromebetas = page.nitromebetas | sort %}
-	{% for i in sorted_nitromebetas %}
+		{% assign sorted_nitromereleases = page.nitromereleases | sort %}
+		{% for i in sorted_nitromereleases %}
 		<a href="{{ i[1].url }}" class="Button NitromeBetaGame">
-		<img src="./Logos/{{i[1].img }}" alt="{{ i[0] }} Logo">
-		{{ i[0] }}
+			<img src="./Logos/{{i[1].img }}" alt="{{ i[0] }} Logo">
+			{{ i[0] }}
 		</a>
-	{% endfor %}
-</div>
+		{% endfor %}
+	</div>
+
+	
+	<h1>
+		Nitrome HTML5 Betas
+	</h1>
+	<div class="BetaLists">
+		<p>
+			Current list of Nitrome HTML5 Betas avalible unlisted on Poki.
+		</p>
+		<p>
+			Last Update April 18, 2021
+		</p>
+		<p>
+			Special thanks to CritterCipher#5887 for compiling the initial list of links!
+		</p>
+
+		{% assign sorted_nitromebetas = page.nitromebetas | sort %}
+		{% for i in sorted_nitromebetas %}
+		<a href="{{ i[1].url }}" class="Button NitromeBetaGame">
+			<img src="./Logos/{{i[1].img }}" alt="{{ i[0] }} Logo">
+			{{ i[0] }}
+		</a>
+		{% endfor %}
+	</div>
 
 </div>
