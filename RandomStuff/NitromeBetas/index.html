@@ -121,30 +121,30 @@ nitromebetas:
 	}
 </style>
 
-<div class="Container">
+<div class="container color-text-default">
 
-	<h1>
+	<h1 class="color-text-accent">
 		Nitrome HTML5 Official Releases
 	</h1>
-	<div class="BetaLists">
+	<div class="p-4 mb-4 color-text-default">
 		<p>
 			Current list of Nitrome HTML5 Official releases, available at Nitrome.com
 		</p>
 
 		{% assign sorted_nitromereleases = page.nitromereleases | sort %}
 		{% for i in sorted_nitromereleases %}
-		<a href="{{ i[1].url }}" class="Button NitromeBetaGame">
-			<img src="./Logos/{{i[1].img }}" alt="{{ i[0] }} Logo">
-			{{ i[0] }}
+		<a href="{{ i[1].url }}" class="Button">
+			<img src="./Logos/{{i[1].img }}" alt="{{ i[0] }} Logo" class="me-3">
+			<p class="color-text-default">{{ i[0] }}</p>
 		</a>
 		{% endfor %}
 	</div>
 
 	
-	<h1>
+	<h1 class="color-text-accent">
 		Nitrome HTML5 Betas
 	</h1>
-	<div class="BetaLists">
+	<div class="p-4 mb-4 color-text-default">
 		<p>
 			Current list of Nitrome HTML5 Betas avalible unlisted on Poki.
 		</p>
@@ -157,9 +157,9 @@ nitromebetas:
 
 		{% assign sorted_nitromebetas = page.nitromebetas | sort %}
 		{% for i in sorted_nitromebetas %}
-		<a href="{{ i[1].url }}" class="Button NitromeBetaGame">
-			<img src="./Logos/{{i[1].img }}" alt="{{ i[0] }} Logo">
-			{{ i[0] }}
+		<a href="{{ i[1].url }}" class="Button">
+			<img src="./Logos/{{i[1].img }}" alt="{{ i[0] }} Logo" class="me-3">
+			<p class="color-text-default">{{ i[0] }}</p>
 		</a>
 		{% endfor %}
 	</div>

@@ -30,9 +30,9 @@ function RenderPage(data) {
 		var Category = data.Categories[CurrentCategory]
 
 		var htmlCategory = document.createElement("div");
-		htmlCategory.classList.add("Expand");
 
 		var htmlCategoryText = document.createElement("h1");
+		htmlCategoryText.classList.add("color-text-accent");
 		htmlCategoryText.innerHTML = CurrentCategory;
 		htmlCategory.append(htmlCategoryText);
 		htmlCategory.id = CurrentCategory;
@@ -41,8 +41,10 @@ function RenderPage(data) {
 			var Question = Category[CurrentQuestion];
 
 			var htmlQuestion = document.createElement("div");
-			htmlQuestion.classList.add("Question");
-			htmlQuestion.classList.add("FullBox");
+			htmlQuestion.classList.add("bg-container");
+			htmlQuestion.classList.add("p-4");
+			htmlQuestion.classList.add("mb-4");
+			htmlQuestion.classList.add("color-text-default");
 			htmlQuestionText = document.createElement("h2");
 			htmlQuestionText.innerHTML = Question.q;
 			htmlQuestion.append(htmlQuestionText);
@@ -54,6 +56,7 @@ function RenderPage(data) {
 				var Source = Question.s[CurrentAnswer];
 
 				var htmlAnswer = document.createElement("a");
+				htmlAnswer.classList.add("Button")
 				htmlAnswer.href = Source;
 
 				Object.keys(Answer).forEach(function(CurrentLine){

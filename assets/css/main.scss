@@ -116,3 +116,28 @@ a.bg-container:hover {
 	border-right: 2px solid var(--default-font);
 	}
 }
+
+/*Custom Button*/
+.Button {
+	justify-content: center;
+	align-items: center;
+	display: inline-flex;
+	
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-decoration: none;
+	border-left: 3px solid var(--accent-font);
+	margin-left: 20px;
+	padding-left: 20px;
+	padding: 10px;
+	background-color: var(--container-bg);
+	color: var(--default-font);
+	background: linear-gradient(to left, var(--container-bg) 50%, var(--container-bg-hover) 50%) right;
+	background-size: 200%;
+	transition: .3s ease-out;
+}
+
+.Button:hover {
+	color: var(--default-font-hover);
+	background-position: left;
+}
