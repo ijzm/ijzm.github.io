@@ -1,15 +1,10 @@
 window.addEventListener('load', function() {
-	SetFooter();
-	SetAge();
 	if(getCookie("language") == "") {
 		setCookie("language", "english", 100);
 	}
 	changeLanguage(getCookie("language"));
-
-	var RetractedElements = document.getElementsByClassName("Retracted");
-	for(var i = 0; i < RetractedElements.length; i++) {
-		RetractedElements[i].style.opacity = 0;
-	}
+	SetFooter();
+	SetAge();
 });
 
 
@@ -17,7 +12,7 @@ window.addEventListener('load', function() {
 function SetFooter() {
 	var date = new Date();
 	var year = date.getFullYear();
-	var footer = document.getElementById("footer")
+	var footer = document.getElementById("Footer")
 	if(footer != null) {
 		footer.innerHTML += year;
 	}
@@ -32,13 +27,9 @@ function SetAge() {
 
 	var year = Math.abs(diffDate.getUTCFullYear() - 1970);
 	//Should fix this
-	var ageES = document.getElementById("AgeES");
-	var ageEN = document.getElementById("AgeEN");
-	if(ageES != null) {
-		ageES.innerHTML = year;
-	}
-	if(ageEN != null) {
-		ageEN.innerHTML = year;
+	var ageDiv = document.getElementById("Age");
+	if(ageDiv) {
+		ageDiv.innerHTML = year;
 	}
 }
 
@@ -46,33 +37,17 @@ function SetAge() {
 function changeLanguage(language) {
 	var esElements = document.getElementsByClassName("es");
 	var enElements = document.getElementsByClassName("en");
-	var btnLanguage = document.getElementById("LanguageButton");
-
-	var esShow = "none";
-	var enShow = "none";
 
 	if(language == "spanish") {
-		esShow = "inline-block";
-		btnLanguage.innerHTML = "ES"
-		document.getElementById("AboutButton").innerHTML = "Acerca de"
-		document.getElementById("PortfolioButton").innerHTML = "Portafolio"
-		document.getElementById("ContactButton").innerHTML = "Contacto"
-		//document.getElementById("ResumeButton").innerHTML = "Resumé"
+		for (var i = 0; i < esElements.length; i++) {
+			esElements[i].classList.remove("d-none");
+			enElements[i].classList.add("d-none");
+		}
 	} else {
-		enShow = "inline-block";		
-		btnLanguage.innerHTML = "EN"
-		document.getElementById("AboutButton").innerHTML = "About"
-		document.getElementById("PortfolioButton").innerHTML = "Portfolio"
-		document.getElementById("ContactButton").innerHTML = "Contact"
-		//document.getElementById("ResumeButton").innerHTML = "Resumé"
-	}
-
-	for (var i = 0; i < esElements.length; i++) {
-		esElements[i].style.display = esShow;
-	}
-
-	for (var i = 0; i < enElements.length; i++) {
-		enElements[i].style.display = enShow;
+		for (var i = 0; i < enElements.length; i++) {
+			enElements[i].classList.remove("d-none");
+			esElements[i].classList.add("d-none");
+		}
 	}
 }
 

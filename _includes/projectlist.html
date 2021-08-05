@@ -1,40 +1,48 @@
-<div id="ProjectList" class="PortfolioList">
-	<a class="Anchor" id="Projects"></a>
-	<a class="Expand" href="javascript:void(0);" onclick="RetractSection(this)" >
-	<h1 class="en">
-		<span class="fas fa-plus-square"></span>
-		Projects:
+<div class="accordion-item bg-transparent border-0">
+	<h1 class="accordion-header" id="Project">
+		<button class="bg-transparent border-0 shadow-none" type="button" data-bs-toggle="collapse"
+			data-bs-target="#CollapseProject" aria-expanded="true" aria-controls="CollapseProject">
+			<span class="fas fa-plus-square"></span>
+			<span class="en color-text-accent">Projects:</span>
+			<span class="es d-none color-text-accent">Proyectos:</span>
+		</button>
 	</h1>
-	<h1 class="es">
-		<span class="fas fa-plus-square"></span>
-		Proyectos:
-	</h1>
-	</a>
-	<div class="GridList Expandable Retracted">
-		{% assign ordered_projects = site.projects | sort: "display-order" %}
-		{% for project in ordered_projects reversed %}
-
-		{% if project.project_url %} 
-		<a href="{{project.project_url}}" class="List">
-		{% else %}
-		<div class="List">
-		{% endif %}
-			<div>
-			<h1 class="en">
-				{{project.title}}
-			</h1>
-			<h1 class="es">
-				{% if project.title_es %} {{project.title_es}} {% else %} {{project.title}} {% endif %}
-			</h1>
-			<p class="en">{{project.desc}}</p>
-			<p class="es">{{project.desc_es}}</p>
+	<div id="CollapseProject" class="accordion-collapse collapse" aria-labelledby="Project">
+		<div class="container accordion-body">
+			<div class="row gy-3">
+				{% assign ordered_projects = site.projects | sort: "display-order" %}
+				{% for project in ordered_projects reversed %}
+				
+				{% if project.project_url %}
+				<a href="{{project.project_url}}" class="col-md-6 text-decoration-none">
+				{% else %}
+				<div class="col-md-6 text-decoration-none">
+				{% endif %}
+				<div class="d-flex flex-column bg-container p-4 h-100">
+					<h1>
+						<span class="en color-text-accent">
+							{{project.title}}
+						</span>
+						<span class="es d-none color-text-accent">
+							{% if project.title_es %}
+								{{project.title_es}}
+							{% else %}
+								{{project.title}}
+							{% endif %}
+						</span>
+					</h1>
+					<p>
+						<span class="en">{{project.desc}}</span>
+						<span class="es d-none">{{project.desc_es}}</span>
+					</p>
+				</div>
+				{% if project.project_url %}
+				</a>
+				{% else %}
+				</div>
+				{% endif %}
+				{% endfor %}
 			</div>
-
-		{% if project.project_url %} 
-		</a>
-		{% else %}
 		</div>
-		{% endif %}
-	{% endfor %}
 	</div>
 </div>

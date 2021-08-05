@@ -1,17 +1,5 @@
 ---
 ---
-@import "desktop/navbar.scss";
-@import "desktop/footer.scss";
-@import "desktop/main.scss";
-@import "desktop/about.scss";
-@import "desktop/portfolio.scss";
-@import "desktop/contact.scss";
-@import "desktop/resume.scss";
-@import "desktop/FlashFAQ.scss";
-
-@import "mobile/navbar.scss";
-@import "mobile/FlashFAQ.scss";
-
 /*----------GLOBAL VARIABLES----------*/
 :root {
 	--default-font:        #C5C6C7;
@@ -31,69 +19,94 @@
 }
 
 html, body {
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	padding: 0;
     scroll-behavior: smooth;
     background-color: var(--background-bg);
 }
 
-h1 {
-	width: 100%;
-	font-size: 3em;
-	margin: 0;
-	color: var(--accent-font);
+/*---BOOTSTRAP STUFF--*/
+
+/*Backgroud Color*/
+.bg-background {
+	background-color: var(--background-bg);
 }
 
-h2 {
-	width: 100%;
-	font-size: 2em;
-	margin: 0;
-	color: var(--accent-font);
+.bg-container {
+	background-color: var(--container-bg);
 }
 
-h3 {
-	width: 100%;
+.bg-container-hover {
+	background-color: var(--container-bg-hover);
+}
+
+a.bg-container {
+	transition: 0.2s ease-in-out;
+}
+
+.accordion-item a .bg-container {
+	transition: 0.2s ease-in-out;
+}
+
+.accordion-item a .bg-container:hover {
+	background-color: var(--container-bg-hover);
+}
+
+a.bg-container:hover {
+	transition: 0.2s ease-in-out;
+	background-color: var(--container-bg-hover);
+}
+
+/*Text Color*/
+.color-text-default {
+	color: var(--default-font);
+}
+
+.color-text-accent {
+	color: var(--accent-font) !important;
+}
+
+/*Text Size*/
+.fs-7vw {
+	font-size: 7vw;
+}
+
+.fs-3vw {
+	font-size: 5vw;
+}
+
+@media only screen and (min-width: 960px) {
+	.fs-3vw {
+		font-size: 3vw;
+	}
+}
+
+.fs-15em {
 	font-size: 1.5em;
-	margin: 0;
 }
 
-.es {
-	display: none;
+/*size*/
+.h-50px {
+	height: 50px;
 }
 
-.FullBox {
-	width: 100%;
-	background-color: var(--container-bg);
-	margin-top: 10px;
-	margin-bottom: 10px;
-	padding: 30px;
+.h-150px {
+	height: 150px;
 }
 
-.FlexList {
-	width: 100%;
-	display: flex;
+.h-200px {
+	height: 200px;
 }
-
-.Button {
-	display: flex;
-	margin-top: 30px;
-	text-decoration: none;
-
-	border-left: 3px solid var(--accent-font);
-	margin-left: 20px;
-	padding-left: 20px;
-
-	padding: 30px;
-
-	background-color: var(--container-bg);
-	background: linear-gradient(to left, var(--container-bg) 50%, var(--container-bg-hover) 50%) right;
-	background-size: 200%;
-	transition: .3s ease-out;
+/*Scrolling*/
+.anchor::before {
+    height: 60px;
+    content: "";
+    display:block;
 }
-
-.Button:hover {
-	color: var(--default-font-hover);
-	background-position: left;
+/*Vertical Lines on Navbar*/
+@media only screen and (min-width: 960px) {
+	.navbar .navbar-nav .nav-item .nav-link {
+		padding: 0 0.5em;
+	}
+	.navbar .navbar-nav .nav-item:not(:last-child) .nav-link {
+	border-right: 2px solid var(--default-font);
+	}
 }

@@ -1,28 +1,31 @@
-<div id="WorkList" class="PortfolioList">
-	<a class="Anchor" id="Work"></a>
-	<a class="Expand" href="javascript:void(0);" onclick="RetractSection(this)" >
-	<h1 class="en">
-		<span class="fas fa-plus-square"></span>
-		Work:
+<div class="accordion-item bg-transparent border-0">
+	<h1 class="accordion-header" id="Work">
+		<button class="bg-transparent border-0 shadow-none" type="button" data-bs-toggle="collapse"
+			data-bs-target="#CollapseWork" aria-expanded="true" aria-controls="CollapseWork">
+			<span class="fas fa-plus-square"></span>
+			<span class="en color-text-accent">Work:</span>
+			<span class="es d-none color-text-accent">Trabajo:</span>
+		</button>
 	</h1>
-	<h1 class="es">
-		<span class="fas fa-plus-square"></span>
-		Trabajo:
-	</h1>
-	</a>
-	<div class="GridList Expandable Retracted">
-		{% assign ordered_works = site.work | sort: "display-order" %}
-		{% for work in ordered_works reversed %}
-
-		<div class="List">
-			<div>
-			<h1>
-				{{work.title}}
-			</h1>
+	<div id="CollapseWork" class="accordion-collapse collapse" aria-labelledby="Work">
+		<div class="container accordion-body">
+			<div class="row gy-3">
+				{% assign ordered_works = site.work | sort: "display-order" %}
+				{% for work in ordered_works reversed %}
+				
+				<div class="col-md-6 text-decoration-none">
+					<div class="d-flex flex-column bg-container p-4 h-100">
+						<h1 class="color-text-accent">
+							{{work.title}}
+						</h1>
+						<p>
+							<span class="en">{{work.desc}}</span>
+							<span class="es d-none">{{work.desc_es}}</span>
+						</p>
+					</div>
+				</div>
+				{% endfor %}
 			</div>
-			<p class="en">{{work.desc}}</p>
-			<p class="es">{{work.desc_es}}</p>
 		</div>
-	{% endfor %}
 	</div>
 </div>

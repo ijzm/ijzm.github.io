@@ -1,22 +1,40 @@
-<nav id="Navbar">
-	<a id="NavbarLogo" href="/#">
-		Ignacio Zevallos
-	</a>
-	<a href="javascript:void(0);" id="NavbarMenu" onclick="ShowMenu()" class="fa fa-bars"></a>
-	<div id="NavButtons">
-		<a id="AboutButton" href="/#About" onclick="ShowMenu()">
-			About
-		</a><p>|</p>
-		<a id="PortfolioButton" href="/#Portfolio" onclick="ShowMenu()">
-			Portfolio
-		</a><p>|</p>
-		<a id="ContactButton" href="/#Contact" onclick="ShowMenu()">
-			Contact
-		</a><p>|</p>
-		<!--<a id="ResumeButton" href="/Resume" onclick="ShowMenu()">
-			Resume
-		</a><p>|</p>-->
-		<a href="javascript:languageButton();" id="LanguageButton" onclick="ShowMenu()">	
-			EN
+<nav class="navbar navbar-expand-md navbar-dark bg-container fixed-top">
+	<div class="container-fluid">
+		<a class="navbar-brand fs-15em color-text-accent" href="/#">
+			Ignacio Zevallos
 		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+		aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+	</div>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+	<ul class="navbar-nav ms-3">
+		<li class="nav-item">
+			<!--TODO: ALIGN TEXT-->
+			<a class="nav-link text-nowrap" href="/#About">
+				<p class="en">About</p>
+				<p class="es d-none">Acerca de</p>
+			</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="/#Portfolio">
+				<p class="en">Portfolio</p>
+				<p class="es d-none">Portafolio</p>
+			</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="/#Contact">
+				<p class="en">Contact</p>
+				<p class="es d-none">Contacto</p>
+			</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="javascript:languageButton();">
+				<p class="en">EN</p>
+				<p class="es d-none">ES</p>
+			</a>
+		</li>
+		</ul>
+	</div>
 </nav>
