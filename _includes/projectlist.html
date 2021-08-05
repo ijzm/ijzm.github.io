@@ -2,7 +2,7 @@
 	<h1 class="accordion-header" id="Project">
 		<button class="bg-transparent border-0 shadow-none" type="button" data-bs-toggle="collapse"
 			data-bs-target="#CollapseProject" aria-expanded="true" aria-controls="CollapseProject">
-			<span class="fas fa-plus-square"></span>
+			<span class="fas fa-plus-square color-text-default"></span>
 			<span class="en color-text-accent">Projects:</span>
 			<span class="es d-none color-text-accent">Proyectos:</span>
 		</button>
@@ -14,9 +14,9 @@
 				{% for project in ordered_projects reversed %}
 				
 				{% if project.project_url %}
-				<a href="{{project.project_url}}" class="col-md-6 text-decoration-none">
+				<a href="{{project.project_url}}" class="col-md-6 text-decoration-none color-text-default">
 				{% else %}
-				<div class="col-md-6 text-decoration-none">
+				<div class="col-md-6 text-decoration-none color-text-default">
 				{% endif %}
 				<div class="d-flex flex-column bg-container p-4 h-100">
 					<h1>

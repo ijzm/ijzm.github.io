@@ -2,7 +2,7 @@
 	<h1 class="accordion-header" id="GameJam">
 		<button class="bg-transparent color-text-accent border-0 shadow-none" type="button" data-bs-toggle="collapse"
 			data-bs-target="#CollapseGamejam" aria-expanded="true" aria-controls="CollapseGamejam">
-			<span class="fas fa-plus-square"></span>
+			<span class="fas fa-plus-square color-text-default"></span>
 			Game Jams:
 		</button>
 	</h1>
@@ -12,7 +12,7 @@
 				{% assign ordered_games = site.gamejams | sort: "display-order" %}
 				{% for game in ordered_games reversed %}
 				<a href="http://teamspontaneouscombustion.github.io/games/{{game.title}}"
-				class="col-md-6 text-decoration-none">
+				class="col-md-6 text-decoration-none color-text-default">
 					<div class="d-flex flex-column bg-container p-4 h-100">
 						<h1 class="color-text-accent">
 							{{game.title}}

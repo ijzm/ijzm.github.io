@@ -15,7 +15,6 @@
 /*--------------DEFAULTS--------------*/
 * {
 	font-family: 'Roboto Mono', monospace;
-	color: var(--default-font);
 }
 
 html, body {
@@ -23,6 +22,9 @@ html, body {
     background-color: var(--background-bg);
 }
 
+body { 
+	padding-top: 65px; 
+}
 /*---BOOTSTRAP STUFF--*/
 
 /*Backgroud Color*/
@@ -48,11 +50,13 @@ a.bg-container {
 
 .accordion-item a .bg-container:hover {
 	background-color: var(--container-bg-hover);
+	color: var(--default-font-hover);
 }
 
 a.bg-container:hover {
 	transition: 0.2s ease-in-out;
 	background-color: var(--container-bg-hover);
+	color: var(--default-font-hover);
 }
 
 /*Text Color*/
