@@ -31,6 +31,52 @@ collections:
   work:
     output: false
 
+Skillset: 
+  Programming Languages:
+    es: Lenguajes de Programación
+    skills:
+      C: 
+        Score: 5
+      C++:
+        Score: 5
+      C#:
+        Score: 4
+      Python:
+        Score: 4
+      JavaScript:
+        Score: 4
+      SQL:
+        Score: 4
+      PHP:
+        Score: 4
+      HTML:
+        Score: 3
+      CSS:
+        Score: 3
+      Java:
+        Score: 3
+  Libraries / Frameworks: 
+    es: Librerías / Frameworks
+    skills:
+      Unity:
+        Score: 4
+      Node.js:
+        Score: 4
+      Jekyll:
+        Score: 4
+      Bootstrap:
+        Score: 3
+  Languages:
+    es: Idiomas
+    skills:
+      Spanish:
+        es: Español
+        Score: 5
+      Ingles:
+        es: English
+        Score: 5
+
+
 # Build settings
 theme: minima
 plugins:
